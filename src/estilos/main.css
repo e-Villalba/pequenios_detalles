@@ -1,0 +1,24 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200&family=Montserrat:wght@100&display=swap");
+.imgLogo {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+            width: 18%;    
+  }
+  .letraLogo {
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: bold;
+    margin-bottom: 0vh;
+    margin-left:2vh
+  }
+
+  .menu{
+    margin-left: 40vh;
+
+  }
+.opcionesMenu
+  {
+  font-family: 'Montserrat', sans-serif;    
+  font-weight: bold;      
+  font-size: 1.5rem;  
+  }
