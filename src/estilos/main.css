@@ -17,7 +17,7 @@
   {
   font-family: 'Montserrat', sans-serif;    
   font-weight: bold;      
-  font-size: 1rem;  
+  font-size: 1.3rem;  
   }
 
   .nroCarrito
@@ -25,3 +25,72 @@
     color:white;
     font-size: 0.85rem;
   }
+
+  .textoCounter
+  {
+    width: 10px importan!;
+
+  }
+
+  .btnIncrDecr {
+    text-align: center;
+    text-justify:initial;
+    width: 10px;
+    height: 28px;
+    
+  }
+  .inputCantidad
+  { 
+    text-align: center; 
+    width: 0px;
+    height: 28px;
+  }
+  .btnAddCarrito {
+    text-align: center;
+    text-justify:initial;
+    font-size: 1rem;
+    width: 150px;
+    height: 28px;  
+  }
+
+  .cardProductos{
+    width: 18rem;
+
+  }
+
+  .imgProducto
+  {
+    object-fit: contain;
+  }
+  
+  
+  .cardProductos:hover {
+    
+    -webkit-box-shadow: 0 1.5px 1.5px rgba(229, 103, 23, 0.075) inset, 0 0 8px white;
+            box-shadow: 0 1.5px 1.5px rgba(229, 103, 23, 0.075) inset, 0 0 8px white;
+            background: rgba(229, 103, 23, 0.075);
+    outline: 0 none;
+  }
+ 
+
+
+  .spinner {
+  border: 5px solid rgba(0, 0, 0, 0.3);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #4759ff;
+  margin: 0 auto;
+  margin-top: 20px;
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
