@@ -3,13 +3,15 @@ import ItemCount from './ItemCount';
 import ItemList from './ItemList';
 import customFetch from "../utils/customFetch";
 import { useEffect, useState } from 'react';
+import ItemDetailContainer from './ItemDetailContainer';
 const { products } = require('../utils/products');
 const ItemListContainer = ({ greeting }) => {
     const [listaProductos, setListaProductos] = useState([]);
+    const [datos, setDatos] = useState([]);
     useEffect(() => {
         customFetch(2000, products)
             .then(result => setListaProductos(result))
-            .catch(err => console.log(err))
+            .catch(err => console.log(err))    
     }, []);
 
     const onAdd = (qty) => {
@@ -20,9 +22,11 @@ const ItemListContainer = ({ greeting }) => {
         <div className='container-fluid d-flex mt-3 justify-content-center'>
             <p >{greeting}</p>
         </div>
+        
         <div className='container-fluid d-flex'>
-            <ItemList items={listaProductos}></ItemList>
+        <ItemDetailContainer></ItemDetailContainer>
         </div>
+        
         <ItemCount stock={10} initial={1} onAdd={onAdd} ></ItemCount>
 
     </>);
