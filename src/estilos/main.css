@@ -55,14 +55,52 @@
 
   .cardProductos{
     width: 18rem;
+  }
 
+  .cardProductosItemDetail{
+    width: 100rem;
   }
 
   .imgProducto
   {
     object-fit: contain;
   }
-  
+  .LetraSmall
+  {
+    font-family: 'Montserrat', sans-serif;    
+    font-weight:lighter;      
+    font-size: 1.6rem;  
+  }
+  .LetraSmallBold
+  {
+    font-family: 'Montserrat', sans-serif;    
+    font-weight:bold;      
+    font-size: 1.6rem;  
+  }
+  .LetraMedium
+  {
+    font-family: 'Montserrat', sans-serif;    
+    font-weight:lighter;      
+    font-size: 2rem;  
+  }
+  .LetraMediumBold
+  {
+    font-family: 'Montserrat', sans-serif;    
+    font-weight:bold;      
+    font-size: 2rem;  
+  }
+  .LetraBig
+  {
+    font-family: 'Montserrat', sans-serif;    
+    font-weight:lighter;
+    font-size: 2.5rem;  
+  }
+  .LetraBigBold
+  {
+    font-family: 'Montserrat', sans-serif;    
+    font-weight: bold;
+    font-size: 2.5rem;  
+  }
   
   .cardProductos:hover {
     
