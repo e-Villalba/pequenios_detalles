@@ -3,7 +3,7 @@ import ItemCount from './ItemCount';
 import ItemList from './ItemList';
 import customFetch from "../utils/customFetch";
 import { useEffect, useState } from 'react';
-import ItemDetailContainer from './ItemDetailContainer';
+
 const { products } = require('../utils/products');
 const ItemListContainer = ({ greeting }) => {
     const [listaProductos, setListaProductos] = useState([]);
@@ -20,12 +20,10 @@ const ItemListContainer = ({ greeting }) => {
 
     return (<>
         <div className='container-fluid d-flex mt-3 justify-content-center'>
-            <p >{greeting}</p>
+               <p >{greeting}</p>
+            <ItemList></ItemList>
         </div>
         
-        <div className='container-fluid d-flex'>
-        <ItemDetailContainer></ItemDetailContainer>
-        </div>
         
         <ItemCount stock={10} initial={1} onAdd={onAdd} ></ItemCount>
 

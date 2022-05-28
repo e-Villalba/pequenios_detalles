@@ -6,17 +6,17 @@ const { products } = require('../utils/products');
 
 
 const ItemDetailContainer = () => {
-    const [dato, setDato] = useState({});
+    const [producto, setProducto] = useState({});
     useEffect(() => {
         customFetch(2000,products[8])
-        .then(result=>setDato(result))
+        .then(result=>setProducto(result))
         .catch(err=>console.log(err))
 
     },[]);    
 return(
     <>
     
-    <ItemDetail item={dato}/> 
+    <ItemDetail item={producto}/> 
     </>
     );
 }
