@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Item = ({ id, nameProduct, stock, cost, description, image }) => {
     return (
         <>
@@ -12,7 +14,8 @@ const Item = ({ id, nameProduct, stock, cost, description, image }) => {
                     <p className="card-text">${cost}</p>                                        
                 </div>
                 <div className="d-flex justify-content-end">                
-                    <button type="button" title="Detalle Producto" class="btn btn-secondary mb-3 d-flex justify-content-end"> <ion-icon size="small" name="ellipsis-horizontal-circle-outline"></ion-icon></button>
+                <Link to={`/item/${id}`}> <button type="button" title="Detalle Producto" class="btnDetalleProd btn-secondary mb-3 d-flex justify-content-end"> <ion-icon size="small" name="ellipsis-horizontal-circle-outline"></ion-icon></button></Link>
+                     
                 </div>
             </div>
         </>

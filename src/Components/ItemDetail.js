@@ -7,16 +7,14 @@ const ItemDetail = ({ item }) => {
         <>
         {
             item.stock > 0?
-            <div className="container content-fluid">
-                <div className="row  justify-content-center align-items-center">
+            <div className="container  ">
+                <div className="row ">
 
                     <div className="col " >
-
-                      
-                            <img src={item.image} class="rounded mx-auto  w-75 imgProducto" alt="..."></img>
+                            <img src={item.image} class="rounded " alt="..."></img>
                       
                     </div>
-                    <div className="col " >
+                {/*<div className="col " >
                         <h5 className="LetraBigBold">{item.nameProduct}</h5>
                         <h5 className="LetraMedium">{item.description}</h5>
                         <p className="LetraMediumBold mt-5">Precio ${item.cost}</p>
@@ -24,7 +22,7 @@ const ItemDetail = ({ item }) => {
                         <div>
                             <ItemCount stock={item.stock} initial={1} onAdd={onAdd} ></ItemCount>
                         </div>
-                    </div>
+        </div>*/}
                     
 
 

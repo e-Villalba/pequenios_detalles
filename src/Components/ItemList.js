@@ -9,7 +9,7 @@ const ItemList = ({ items }) => {
                    
                     {
                         items.length > 0
-                            ? items.map(item => <Item key={item.id} nameProduct={item.nameProduct} stock={item.stock} cost={item.cost} description={item.description} image={item.image} />)
+                            ? items.map(item => <Item id={item.id} nameProduct={item.nameProduct} stock={item.stock} cost={item.cost} description={item.description} image={item.image} />)
                             : <div class="spinner"></div>
                     }
                    
