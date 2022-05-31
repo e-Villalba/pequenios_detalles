@@ -3,6 +3,7 @@ import '../estilos/main.css'
 import imgLogo2 from "../imagenes/PD_LOGO.png"
 import CartWidget from '../Components/CartWidget';
 import { Link } from 'react-router-dom';
+import SearchForm from './SearchForm';
 const NavBar = () => {
 
   return (
@@ -28,6 +29,7 @@ const NavBar = () => {
                   <li className="nav-item px-3">
                     <Link className="opcionesMenu" to={'/category/2'}> Buzos</Link>
                   </li>
+                  <SearchForm></SearchForm>
 
 
                 </ul>

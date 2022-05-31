@@ -1,4 +1,6 @@
 import ItemCount from './ItemCount'
+
+
 const ItemDetail = ({ item }) => {
     const onAdd = (qty) => {
         alert("Seleccionaste " + qty + " items para tu compra.");
@@ -20,9 +22,10 @@ const ItemDetail = ({ item }) => {
                         <p className="LetraMediumBold mt-5">Precio ${item.cost}</p>
                         <p className="LetraSmall">Stock {item.stock} unidades</p>                        
                         <div>
-                            <ItemCount stock={item.stock} initial={1} onAdd={onAdd} ></ItemCount>
+                            <ItemCount stock={item.stock} initial={1} onAdd={onAdd} ></ItemCount>                                                        
                         </div>
                 </div>
+                
                     
 
 
