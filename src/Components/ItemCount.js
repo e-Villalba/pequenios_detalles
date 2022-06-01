@@ -24,7 +24,7 @@ const ItemCount = ({ stock = 0, inicial = 1, onAdd }) => {
                         <input class="txtItemCount" type="text" name="campoApellido" id="idApellido"          value={count} />
                       
                         <button className="btnItemCount LetraSmallBold" onClick={increment} type="button">+</button>
-                        {stock ? <button type="button" className="btn btn-primary"  onClick={() => onAdd(count)}>Agregar a Carrito</button> : <button type="button" class="btn btn-primary  disabled">Agregar a Carrito</button>}
+                        {count ? <button type="button" className="btn btn-primary"  onClick={() => onAdd(count)}>Agregar a Carrito</button> : <button type="button" className="btn btn-primary  disabled">Agregar a Carrito</button>}
                     </div>
                 </div>
             </div>

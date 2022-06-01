@@ -29,7 +29,7 @@ const NavBar = () => {
                   <li className="nav-item px-3">
                     <Link className="opcionesMenu" to={'/category/2'}> Buzos</Link>
                   </li>
-                  <SearchForm></SearchForm>
+                  {/*<SearchForm></SearchForm>*/}
 
 
                 </ul>
