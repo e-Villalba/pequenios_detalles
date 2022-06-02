@@ -1,9 +1,10 @@
 import ItemCount from './ItemCount'
 import AddCart from './AddCart';
+import StayBuying from './StayBuying';
 import { useState } from 'react';
 
 const ItemDetail = ({ item }) => {
-    const [itemCount,setItemCount]=useState(0);
+    const [itemCount, setItemCount] = useState(0);
     const onAdd = (qty) => {
         alert("Seleccionaste " + qty + " items para tu compra.");
         setItemCount(qty)
@@ -25,11 +26,17 @@ const ItemDetail = ({ item }) => {
                                 <p className="LetraMediumBold mt-5">Precio ${item.cost}</p>
                                 <p className="LetraSmall">Stock {item.stock} unidades</p>
                                 <div>
-                                    {
+                                {
                                     itemCount===0?
-                                    <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} ></ItemCount>
-                                    :<AddCart></AddCart>
-                                    }
+                                    
+                                        <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd} ></ItemCount>
+                                    :
+                                        <div className='d-flex justify-content-center'>
+                                            <StayBuying></StayBuying> <AddCart></AddCart>
+                                        </div>
+
+                                    
+                                }
                                 </div>
                             </div>
                         </div>
