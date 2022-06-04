@@ -1,13 +1,19 @@
 import ItemCount from './ItemCount'
 import AddCart from './AddCart';
 import StayBuying from './StayBuying';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { CartContext } from './CartContext';
 
 const ItemDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(0);
+    const test = useContext(CartContext);
+
     const onAdd = (qty) => {
         alert("Seleccionaste " + qty + " items para tu compra.");
-        setItemCount(qty)
+        setItemCount(qty);
+        //Agregar este Producto al carrito
+        test.addToCart(item);
+    
     }
     return (
         <>

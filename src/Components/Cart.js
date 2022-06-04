@@ -1,7 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus} from "@fortawesome/free-solid-svg-icons"
+import { useContext } from 'react'
+import { CartContext } from './CartContext'
+import Item from './Item'
 
 const Cart = () => {
+    const test= useContext(CartContext)
     return (
 
         <div>
@@ -13,7 +17,11 @@ const Cart = () => {
                     </div>
 
                     <div className="col " >
-                        <FontAwesomeIcon  size="10x" icon={faCartPlus} ></FontAwesomeIcon>
+                        {
+                            test.cartList.length===0?
+                            <FontAwesomeIcon  size="10x" icon={faCartPlus} ></FontAwesomeIcon>
+                            : test.cartList.map((item)=> <p>{item.nameProduct}</p>)
+                        }
                     </div>
                 </div>
 

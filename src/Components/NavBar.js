@@ -39,7 +39,7 @@ const NavBar = () => {
           </div>
           <div className='col-md-3 container d-flex bg-dark justify-content-center align-items-center'>
             <div >
-              <CartWidget></CartWidget>
+              <Link to='/cart'> <CartWidget></CartWidget></Link>
             </div>
             <div>
 
