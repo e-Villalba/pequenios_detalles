@@ -4,6 +4,7 @@ import imgLogo2 from "../imagenes/PD_LOGO.png"
 import CartWidget from '../Components/CartWidget';
 import { Link } from 'react-router-dom';
 import SearchForm from './SearchForm';
+
 const NavBar = () => {
 
   return (

@@ -21,9 +21,8 @@ const ItemCount = ({ stock = 0, inicial = 1, onAdd }) => {
                 <div className='row '>
                     <div className=" col  d-flex justify-content-center" >
                         <button className="btnItemCount LetraBigBold " onClick={decrement} type="button">-</button>
-                        <input class="txtItemCount" type="text" name="campoApellido" id="idApellido"          value={count} />
-                      
-                        <button className="btnItemCount LetraSmallBold" onClick={increment} type="button">+</button>
+                        <p className="txtItemCount mt-3">{count}</p>
+                        <button className="btnItemCount LetraMediumBold" onClick={increment} type="button">+</button>
                         {count ? <button type="button" className="btn btn-primary"  onClick={() => onAdd(count)}>Agregar a Carrito</button> : <button type="button" className="btn btn-primary  disabled">Agregar a Carrito</button>}
                     </div>
                 </div>

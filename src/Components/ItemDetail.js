@@ -6,15 +6,18 @@ import { CartContext } from './CartContext';
 
 const ItemDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(0);
-    const test = useContext(CartContext);
+    const [cart,setCart]=useState({})
+    const compraContext = useContext(CartContext);
 
     const onAdd = (qty) => {
         alert("Seleccionaste " + qty + " items para tu compra.");
-        setItemCount(qty);
+        setItemCount(qty);        
+   
         //Agregar este Producto al carrito
-        test.addToCart(item);
+        compraContext.addToCart({...item,cantidad:qty});
     
     }
+    console.log(cart,"Cart")
     return (
         <>
             {
@@ -23,7 +26,7 @@ const ItemDetail = ({ item }) => {
                         <div className="row vh-100 align-items-center">
 
                             <div className="col " >
-                                <img src={item.image} class="rounded w-75" alt="..."></img>
+                                <img src={item.image} className="rounded w-75" alt="..."></img>
 
                             </div>
                             <div className="col text-center " >
@@ -47,7 +50,7 @@ const ItemDetail = ({ item }) => {
                             </div>
                         </div>
                     </div>
-                    : <div class="spinner"></div>
+                    : <div className="spinner"></div>
             }
         </>
     )

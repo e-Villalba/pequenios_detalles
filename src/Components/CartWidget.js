@@ -1,13 +1,19 @@
 
+import { useContext } from 'react';
 import '../estilos/main.css'
-const CartWidget = () => {
+import { CartContext } from './CartContext';
 
+
+const CartWidget = () => {
+    const {AddBadget,cartList}= useContext(CartContext);
+    
     return (
         <>
             <div className='d-flex'>
                 <ion-icon className="" name="cart-outline">                                
                 </ion-icon>             
-                <p className='nroCarrito position-relative'>1</p>
+                
+                <p><span class="w3-badge position-relative w3-small w3-green">{cartList.length>0 && AddBadget() }</span></p>
             </div>
        
         </>

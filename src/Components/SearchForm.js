@@ -10,7 +10,7 @@ const SearchForm = () => {
         <>
             <div className='row d-flex align-items-center justify-content-center'>
                 <div className="d-flex">
-                    <input class="datosForm datosContacto" type="text" name="campoNombre" id="idNombre"
+                    <input className="datosForm datosContacto" type="text" name="campoNombre" id="idNombre"
                         placeholder=""></input>
                         <FontAwesomeIcon className="mt-2 ms-3" size="xl" icon={faMagnifyingGlassArrowRight} ></FontAwesomeIcon>
                 </div>
