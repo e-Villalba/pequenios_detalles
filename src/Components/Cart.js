@@ -51,7 +51,7 @@ const Cart = () => {
                                 </div>
                                 <div className="">                
                                     <h5 className="card-title">{item.nameProduct}</h5>
-                                    <p className="card-text">${item.cost}</p>                                        
+                                    <p className="card-text">Precio Unitario $ {item.cost}</p>                                        
                                     <p className="card-text"> Cantidad {item.cantidad}</p>          
                                 </div>
                                 

@@ -9,12 +9,15 @@ const CartWidget = () => {
     
     return (
         <>
-            <div className='d-flex'>
+           <div className='d-flex'>
                 <ion-icon className="" name="cart-outline">                                
-                </ion-icon>             
                 
-                <p><span class="w3-badge position-relative w3-small w3-green">{cartList.length>0 && AddBadget() }</span></p>
+                </ion-icon>             
+                <p><span class="w3-badge position-relative w3-small w3-green mb-">{cartList.length>0 && AddBadget() }</span></p>
+                
+                
             </div>
+            
        
         </>
     );
