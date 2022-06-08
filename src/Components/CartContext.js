@@ -44,8 +44,21 @@ const CartContextProvider =({children}) => {
     {
         return cartList.reduce((acc,item)=>acc=acc+item.cantidad,0)
     }
+    const calcularTotalProducto=(item)=>
+    {
+        return item.cantidad * item.cost
+    }
+    const calcularSubtotal=()=>
+    {
+        let totalProducto=cartList.map(item=>calcularTotalProducto(item))
+        console.log(cartList,"Cartlistttt")
+        console.log(totalProducto,"Total Proudctoooo")
+
+        return totalProducto.reduce((valorPrevio,valorActual)=>valorPrevio+valorActual)
+    }
+
     return(
-            <CartContext.Provider value={{cartList,addToCart,removeItem,clear,isInCart,AddBadget}}>
+            <CartContext.Provider value={{cartList,addToCart,removeItem,clear,isInCart,AddBadget,calcularTotalProducto,calcularSubtotal}}>
              {children}           
             </CartContext.Provider>
 

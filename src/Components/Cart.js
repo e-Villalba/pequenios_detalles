@@ -42,26 +42,28 @@ const Cart = () => {
                                 </div>
                             </div>
                                 {test.cartList.map((item)=> 
-                                <div className="col justify-content-start" >
+                                <div className="col justify-content-start" >                                    
+                                    <div className="card text-center cardProductos mx-3 my-3" >            
+                                    <div className="card-body d-flex align-content-center ">
+                                        <img src={item.image} className="rounded mx-auto d-block w-50 imgProducto" alt="..."></img>
+                    
+                                    </div>
+                                    <div className="">                
+                                        <h5 className="card-title">{item.nameProduct}</h5>
+                                        <p className="card-text">Precio Unitario $ {item.cost}</p>                                        
+                                        <p className="card-text"> Cantidad {item.cantidad}</p>      
+                                        <p className="card-text"> Total Producto {test.calcularTotalProducto(item)}</p>          
+                                        <p className="card-text"> Total Producto {test.calcularSubtotal()}</p>          
+                                    </div>
                                     
-                                <div className="card text-center cardProductos mx-3 my-3" >            
-                                <div className="card-body d-flex align-content-center ">
-                                    <img src={item.image} className="rounded mx-auto d-block w-50 imgProducto" alt="..."></img>
-                
-                                </div>
-                                <div className="">                
-                                    <h5 className="card-title">{item.nameProduct}</h5>
-                                    <p className="card-text">Precio Unitario $ {item.cost}</p>                                        
-                                    <p className="card-text"> Cantidad {item.cantidad}</p>          
-                                </div>
+                                    <div className="d-flex justify-content-end">                
+                                        <button type="button" title="Eliminar Producto"  onClick={() => eliminarProducto(item.id)} className="btnDetalleProd btn-secondary mb-3 me-3 d-flex "> 
+                                            <ion-icon size="small" name="trash-bin-outline"></ion-icon>
+                                        </button>
+                                        
+                                    </div>
                                 
-                                <div className="d-flex justify-content-end">                
-                                    <button type="button" title="Eliminar Producto"  onClick={() => eliminarProducto(item.id)} className="btnDetalleProd btn-secondary mb-3 me-3 d-flex "> 
-                                        <ion-icon size="small" name="trash-bin-outline"></ion-icon>
-                                    </button>
-                                    
-                                </div>
-                            </div>
+                                    </div>
                                 </div>
                                         
                         
