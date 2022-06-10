@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import FormatNumber from "../utils/FormatNumber";
 
 const Item = ({ id, nameProduct, stock, cost, description, image }) => {
     return (
@@ -11,7 +12,7 @@ const Item = ({ id, nameProduct, stock, cost, description, image }) => {
                 </div>
                 <div className="">                
                     <h5 className="card-title">{nameProduct}</h5>
-                    <p className="card-text">${cost}</p>                                        
+                    <p className="card-text">$ <FormatNumber number={cost}></FormatNumber></p>                                        
                 </div>
                 <div className="d-flex justify-content-end">                
                 <Link to={`/item/${id}`}> <button type="button" title="Detalle Producto" className="btnDetalleProd btn-secondary mb-3 d-flex justify-content-end"> <ion-icon size="small" name="ellipsis-horizontal-circle-outline"></ion-icon></button></Link>

@@ -44,21 +44,38 @@ const CartContextProvider =({children}) => {
     {
         return cartList.reduce((acc,item)=>acc=acc+item.cantidad,0)
     }
-    const calcularTotalProducto=(item)=>
+    const calcularTotalProducto=(id)=>
     {
-        return item.cantidad * item.cost
+        /*let index = cartList.map(item => item.id).indexOf(parseInt(id));*/
+        let index=cartList.findIndex((element)=>parseInt(element.id)===parseInt(id))       
+        
+        console.log(cartList,'cartList')
+        console.log(cartList[index].cost,'cartList[index].cost')
+        console.log(cartList[index].cantidad,'cartList[index].cantidad')
+        return cartList[index].cost * cartList[index].cantidad;
     }
     const calcularSubtotal=()=>
     {
-        let totalProducto=cartList.map(item=>calcularTotalProducto(item))
-        console.log(cartList,"Cartlistttt")
-        console.log(totalProducto,"Total Proudctoooo")
+        let totalProducto=cartList.map(item=>calcularTotalProducto(item.id)) 
 
         return totalProducto.reduce((valorPrevio,valorActual)=>valorPrevio+valorActual)
     }
+    const calcularIVA=()=>
+    {
+        
 
+        let vIVa = (calcularSubtotal())*21/100;
+        
+        return vIVa;
+    }
+    const calcularPrecioFinalCompra=()=>
+    {
+        
+
+        return calcularIVA()+ calcularSubtotal()
+    }
     return(
-            <CartContext.Provider value={{cartList,addToCart,removeItem,clear,isInCart,AddBadget,calcularTotalProducto,calcularSubtotal}}>
+            <CartContext.Provider value={{cartList,addToCart,removeItem,clear,isInCart,AddBadget,calcularTotalProducto,calcularSubtotal,calcularIVA,calcularPrecioFinalCompra}}>
              {children}           
             </CartContext.Provider>
 

@@ -3,6 +3,7 @@ import AddCart from './AddCart';
 import StayBuying from './StayBuying';
 import { useContext, useState } from 'react';
 import { CartContext } from './CartContext';
+import FormatNumber from '../utils/FormatNumber';
 
 const ItemDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(0);
@@ -32,7 +33,7 @@ const ItemDetail = ({ item }) => {
                             <div className="col text-center " >
                                 <h5 className="LetraBigBold">{item.nameProduct}</h5>
                                 <h5 className="LetraMedium">{item.description}</h5>
-                                <p className="LetraMediumBold mt-5">Precio ${item.cost}</p>
+                                <p className="LetraMediumBold mt-5">Precio $ <FormatNumber number={item.cost}></FormatNumber></p>
                                 <p className="LetraSmall">Stock {item.stock} unidades</p>
                                 <div>
                                 {

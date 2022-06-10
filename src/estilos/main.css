@@ -90,6 +90,10 @@
     width: 100rem;
   }
 
+  .cardSummary{
+    width: 30rem;
+  }
+
   .imgProducto
   {
     object-fit:contain;
