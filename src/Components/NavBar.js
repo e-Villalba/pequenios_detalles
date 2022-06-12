@@ -25,7 +25,7 @@ const NavBar = () => {
               <div className="collapse navbar-collapse  menu" id="navbarNav">
                 <ul className="navbar-nav text-center fa-ul ulMargin">
                   <li className="nav-item px-3">
-                    <Link className="opcionesMenu" to={'/category/1'}>  Remeras</Link>
+                    <Link className="opcionesMenu" to={'/category/1'}> Remeras</Link>
                   </li>
                   <li className="nav-item px-3">
                     <Link className="opcionesMenu" to={'/category/2'}> Buzos</Link>

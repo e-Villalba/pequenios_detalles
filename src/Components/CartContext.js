@@ -46,12 +46,7 @@ const CartContextProvider =({children}) => {
     }
     const calcularTotalProducto=(id)=>
     {
-        /*let index = cartList.map(item => item.id).indexOf(parseInt(id));*/
-        let index=cartList.findIndex((element)=>parseInt(element.id)===parseInt(id))       
-        
-        console.log(cartList,'cartList')
-        console.log(cartList[index].cost,'cartList[index].cost')
-        console.log(cartList[index].cantidad,'cartList[index].cantidad')
+        let index=cartList.findIndex((element)=>element.id===id)       
         return cartList[index].cost * cartList[index].cantidad;
     }
     const calcularSubtotal=()=>

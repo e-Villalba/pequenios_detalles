@@ -18,7 +18,7 @@ const ItemDetail = ({ item }) => {
         compraContext.addToCart({...item,cantidad:qty});
     
     }
-    console.log(cart,"Cart")
+    
     return (
         <>
             {
@@ -34,7 +34,7 @@ const ItemDetail = ({ item }) => {
                                 <h5 className="LetraBigBold">{item.nameProduct}</h5>
                                 <h5 className="LetraMedium">{item.description}</h5>
                                 <p className="LetraMediumBold mt-5">Precio $ <FormatNumber number={item.cost}></FormatNumber></p>
-                                <p className="LetraSmall">Stock {item.stock} unidades</p>
+                                <p className="LetraSmall">Stock {item.stock} unidades</p>                                
                                 <div>
                                 {
                                     itemCount===0?
