@@ -32,7 +32,7 @@ const ItemListContainer = ({ greeting }) => {
     }*/
 
     //componentDidUpdate
-    console.log(id,"id ItemlistContainer")
+    
     useEffect(() => {
         firestoreFetch(id)
             .then(result => setListaProductos(result))

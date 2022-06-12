@@ -26,7 +26,7 @@ const CartContextProvider =({children}) => {
 
     const removeItem =(itemId) =>{
     //Quitar el producto con id= id con un filter
-        const productosNoEliminados=cartList.filter(item=>item.id!==parseInt(itemId));
+        const productosNoEliminados=cartList.filter(item=>item.id!==itemId);
         setCartList(productosNoEliminados);
 
     }
