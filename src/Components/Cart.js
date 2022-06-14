@@ -6,30 +6,75 @@ import FormatNumber from "../utils/FormatNumber";
 import ClearCart from './ClearCart'
 import { Link } from 'react-router-dom'
 import StayBuying from './StayBuying'
+import { collection, serverTimestamp, setDoc,doc, updateDoc, increment } from 'firebase/firestore';
+import { queryByTestId } from '@testing-library/react';
+import db from '../utils/firebaseConfig';
 const Cart = () => {
     const test = useContext(CartContext)
 
     const eliminarProducto = (idProducto) => {
         test.removeItem(idProducto);
-
     }
+    const createOrder = () => {
+        const itemsOrdenCompra= test.cartList.map(item=>({
+             id: item.id,
+             price: item.cost,
+             title: item.nameProduct,
+             qty: item.cantidad
+
+        }))
+        let order={
+            buyer:{
+                email:"esteban.villalba@gmail.com",
+                name:"Esteban Villalba",
+                phone:"351 456789"
+            },    
+            date:serverTimestamp(),
+            total: test.calcularPrecioFinalCompra(),
+            items:itemsOrdenCompra
+
+        };
+  
+        const createOrderFireStore= async()=>{
+            const newOrderRef=doc(collection(db,"orders"))
+            await setDoc(newOrderRef,order);
+            return newOrderRef;
+           }
+        createOrderFireStore()
+        .then (result=>alert("Se ha creado la nueva orden " + result.id))
+        .catch (err=>console.log(err));
+
+        test.cartList.forEach(async(item) => {
+            const itemRef=doc(db,"products",item.id)
+            await updateDoc(itemRef,{
+                 stock: increment(-item.cantidad)   
+
+            })
+        });
+        
+        test.clear();
+      
+    }
+
+
     return (
 
-
+        
         <div className="container">
             {
-
+               
                 test.cartList.length === 0 ?
-                    <div className="row vh-100 align-items-center">
-                        <div className="col d-flex justify-content-center" >
-                            <div>
-                                <FontAwesomeIcon size="10x" icon={faCartPlus} ></FontAwesomeIcon>
-                            </div>
-                            <div>
-                                <p className='LetraBigBold ms-5'>Su carrito está vacío</p>
-                            </div>
-                        </div>
-                    </div>
+                    
+                            <div className="row vh-100 align-items-center">
+                                <div className="col d-flex justify-content-center" >
+                                    <div>
+                                        <FontAwesomeIcon size="10x" icon={faCartPlus} ></FontAwesomeIcon>
+                                    </div>
+                                    <div>
+                                      <p className='LetraBigBold ms-5'>Su carrito está vacío</p>
+                                    </div>
+                                </div>
+                            </div>                            
                     :
                     <>
                         <div className='container'>
@@ -91,7 +136,7 @@ const Cart = () => {
                                                 <div className='col '><p className=" LetraSmallBold "> $ <FormatNumber number={test.calcularPrecioFinalCompra()}/></p></div>
                                             </div>
 
-                                            <button type="button" className="btn btn-primary">Finalizar Compra</button>
+                                            <button type="button" className="btn btn-primary"  onClick={() => createOrder()}>Finalizar Compra</button>
 
                                         </div>
                                     </div>

@@ -6,6 +6,8 @@ export const CartContext =createContext();
 
 const CartContextProvider =({children}) => {        
     const[cartList, setCartList]=useState([]);
+    
+    
 
     const addToCart = (item) => {
         const index=cartList.findIndex((element)=>element.id===item.id)
@@ -33,7 +35,7 @@ const CartContextProvider =({children}) => {
 
     const clear=() =>{
         // Remover todos los items
-        setCartList([]);
+        setCartList([]);     
     }
     const isInCart= (item) => 
     { //true|false
