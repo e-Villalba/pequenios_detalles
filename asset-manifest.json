@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/pequenios_detalles/static/css/main.beb294f3.css",
+    "main.js": "/pequenios_detalles/static/js/main.72dbdd4d.js",
+    "static/media/PD_LOGO.png": "/pequenios_detalles/static/media/PD_LOGO.dc2b24e786e2e91b9bdd.png",
+    "index.html": "/pequenios_detalles/index.html",
+    "main.beb294f3.css.map": "/pequenios_detalles/static/css/main.beb294f3.css.map",
+    "main.72dbdd4d.js.map": "/pequenios_detalles/static/js/main.72dbdd4d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.beb294f3.css",
+    "static/js/main.72dbdd4d.js"
+  ]
+}
