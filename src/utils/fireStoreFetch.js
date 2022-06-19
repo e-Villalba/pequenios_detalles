@@ -27,7 +27,22 @@ export const firestoreFetchOne = async (idItem) => {
           ...docSnap.data()
       }
     } else {
-      // doc.data() will be undefined in this case
+
+      console.log("No such document!");
+    }
+}
+
+export const firestoreFetchOneOrder = async (idOrder) => {
+    const docRef = doc(db, "orders", idOrder);
+    const docSnap = await getDoc(docRef);
+    
+    if (docSnap.exists()) {
+      return {
+          id: idOrder,
+          ...docSnap.data()
+      }
+    } else {
+
       console.log("No such document!");
     }
 }

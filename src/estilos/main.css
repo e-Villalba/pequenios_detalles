@@ -81,7 +81,9 @@
     font-family: 'Barlow Condensed', sans-serif;
     color: black;
   }
-
+  .cardatosContacto{
+    width: 23rem;
+  }
   .cardProductos{
     width: 18rem;
   }
@@ -91,7 +93,7 @@
   }
 
   .cardSummary{
-    width: 30rem;
+    width: 35rem;
   }
 
   .imgProducto
@@ -299,3 +301,8 @@
 }
 
 
+.inputNoEditable
+{
+    border: 1px solid #000;
+
+}

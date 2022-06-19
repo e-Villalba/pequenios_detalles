@@ -6,9 +6,25 @@ export const CartContext =createContext();
 
 const CartContextProvider =({children}) => {        
     const[cartList, setCartList]=useState([]);
-    
-    
+    const[userName, setUserName]=useState();
+    const[userApellido, setUserApellido]=useState();
+    const[userPhone, setUserPhone]=useState();
+    const[userMail, setUserMail]=useState();
+    const addUserName = (pUserName) => {        
+        setUserName(pUserName)
+    }
+    const addUserApellido = (pUserApellido) => {        
+        setUserApellido(pUserApellido)
+    }
+    const addUserMail = (pUserMail) => {        
+        setUserMail(pUserMail)
+    }
 
+    const addUserPhone = (pUserPhone) => {        
+        setUserPhone(pUserPhone)
+    }
+
+      
     const addToCart = (item) => {
         const index=cartList.findIndex((element)=>element.id===item.id)
         if(index===-1)
@@ -26,16 +42,18 @@ const CartContextProvider =({children}) => {
         
     }   
 
-    const removeItem =(itemId) =>{
-    //Quitar el producto con id= id con un filter
-        const productosNoEliminados=cartList.filter(item=>item.id!==itemId);
-        setCartList(productosNoEliminados);
 
-    }
+    const removeItem =(itemId) =>{
+        //Quitar el producto con id= id con un filter
+            const productosNoEliminados=cartList.filter(item=>item.id!==itemId);
+            setCartList(productosNoEliminados);
+    
+        }
+    
 
     const clear=() =>{
         // Remover todos los items
-        setCartList([]);     
+        setCartList([]);
     }
     const isInCart= (item) => 
     { //true|false
@@ -72,7 +90,7 @@ const CartContextProvider =({children}) => {
         return calcularIVA()+ calcularSubtotal()
     }
     return(
-            <CartContext.Provider value={{cartList,addToCart,removeItem,clear,isInCart,AddBadget,calcularTotalProducto,calcularSubtotal,calcularIVA,calcularPrecioFinalCompra}}>
+            <CartContext.Provider value={{cartList,userName,userPhone,userMail,userApellido,addToCart,removeItem,clear,isInCart,AddBadget,calcularTotalProducto,calcularSubtotal,calcularIVA,calcularPrecioFinalCompra,addUserName,addUserApellido,addUserPhone,addUserMail}}>
              {children}           
             </CartContext.Provider>
 

@@ -3,8 +3,7 @@ import '../estilos/main.css'
 import imgLogo2 from "../imagenes/PD_LOGO.png"
 import CartWidget from '../Components/CartWidget';
 import { Link } from 'react-router-dom';
-import SearchForm from './SearchForm';
-
+import UserLogin from './UserLogin';
 const NavBar = () => {
 
   return (
@@ -30,8 +29,6 @@ const NavBar = () => {
                   <li className="nav-item px-3">
                     <Link className="opcionesMenu" to={'/category/2'}> Buzos</Link>
                   </li>
-                  {/*<SearchForm></SearchForm>*/}
-
 
                 </ul>
 
@@ -39,6 +36,10 @@ const NavBar = () => {
             </nav>
           </div>
           <div className='col-md-3 container d-flex bg-dark justify-content-center align-items-center'>
+          <div >
+              <Link to='/UserData'><UserLogin></UserLogin> </Link>
+            </div>
+
             <div >
               <Link to='/cart'> <CartWidget></CartWidget></Link>
             </div>
