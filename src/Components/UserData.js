@@ -33,12 +33,9 @@ const UserData = () => {
         test.addUserPhone(userPhone)
         test.addUserMail(userMail)
     }
-    if(!test.userName)
-    {
-        console.log(test.userName,"userName FUERA RETURN")
-    }
+
     return (
-                     
+                   
         
        <div className="row">
              <div className="col-md-12 text-center mt-3">

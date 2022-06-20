@@ -13,7 +13,7 @@ const CartWidget = () => {
                 <ion-icon className=""  name="cart-outline">                                
                 
                 </ion-icon>             
-                <p><span class="w3-badge position-relative w3-small w3-green mb-">{cartList.length>0 && AddBadget() }</span></p>
+                <p><span className="w3-badge position-relative w3-small w3-green mb-">{cartList.length>0 && AddBadget() }</span></p>
                 
                 
             </div>

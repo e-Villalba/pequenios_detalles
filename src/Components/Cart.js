@@ -5,12 +5,8 @@ import { useContext } from 'react'
 import { CartContext } from './CartContext'
 import FormatNumber from "../utils/FormatNumber";
 import ClearCart from './ClearCart'
-import { firestoreFetchOneOrder } from '../utils/fireStoreFetch'
-import { useEffect } from 'react'
-
 import StayBuying from './StayBuying'
 import { collection, serverTimestamp, setDoc, doc, updateDoc, increment } from 'firebase/firestore';
-
 import db from '../utils/firebaseConfig';
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
@@ -179,7 +175,11 @@ const Cart = () => {
                                                 <div className='col '><p className=" LetraSmallBold "> Total Compra</p></div>
                                                 <div className='col '><p className=" LetraSmallBold "> $ <FormatNumber number={test.calcularPrecioFinalCompra()} /></p></div>
                                             </div>
-                                            <button type="button" className="btn btn-primary" onClick={() => createOrder()}>Finalizar Compra</button>
+                                            {test.userName?
+                                            <button type="button" className="btn btn-primary" onClick={() => createOrder()} >Finalizar Compra </button>
+                                            :
+                                            <button type="button" className="btn btn-primary disabled"  >Finalizar Compra </button>
+                                            }
                                         </div>
                                     </div>
                                 </div>

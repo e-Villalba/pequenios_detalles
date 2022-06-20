@@ -12,7 +12,7 @@ const ItemListContainer = ({ greeting }) => {
         firestoreFetch(id)
             .then(result => setListaProductos(result))
             .catch(err => {
-                console.log(err,"Firebase Caidoooo")
+                console.log(err,"Firebase Caido")
                 
             });
     }, [id]);
