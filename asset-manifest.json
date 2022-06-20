@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/pequenios_detalles/static/css/main.1233fb5b.css",
-    "main.js": "/pequenios_detalles/static/js/main.5d5dc666.js",
-    "static/media/PD_LOGO.png": "/pequenios_detalles/static/media/PD_LOGO.dc2b24e786e2e91b9bdd.png",
-    "index.html": "/pequenios_detalles/index.html",
-    "main.1233fb5b.css.map": "/pequenios_detalles/static/css/main.1233fb5b.css.map",
-    "main.5d5dc666.js.map": "/pequenios_detalles/static/js/main.5d5dc666.js.map"
+    "main.css": "/static/css/main.1233fb5b.css",
+    "main.js": "/static/js/main.efcaaacc.js",
+    "static/media/PD_LOGO.png": "/static/media/PD_LOGO.dc2b24e786e2e91b9bdd.png",
+    "index.html": "/index.html",
+    "main.1233fb5b.css.map": "/static/css/main.1233fb5b.css.map",
+    "main.efcaaacc.js.map": "/static/js/main.efcaaacc.js.map"
   },
   "entrypoints": [
     "static/css/main.1233fb5b.css",
-    "static/js/main.5d5dc666.js"
+    "static/js/main.efcaaacc.js"
   ]
 }
