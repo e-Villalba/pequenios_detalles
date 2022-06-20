@@ -77,7 +77,6 @@ También me aportó sugerencias para cada entrega y para la entrega final el plu
 
 ## Expresiones de Gratitud 🎁
 * Primero que nada Gracias Profe Alex y mi Tutor Rodrigo. Sus conocimientos y aportes hicieron posible este aprendizaje.
-* Si te atreves, Comenta a otros sobre este proyecto 📢
 * Si algún día están por Argentina, Provincia de Córdoba, Localidad La Cumbre serán Bienvenidos y les invitaré una cerveza 🍺 o un café ☕ por todo su apoyo! 
 
 
