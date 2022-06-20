@@ -44,7 +44,7 @@ Los pasos enumerados son los descriptos por nuestro QUERIDO Profe Alex Marin Men
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+Herramientas, Frameworks y Recursos utilizados en la construcción del Proyecto.
 
 * Visual Studio Code:   Como IDE para el Desarrollo: "https://code.visualstudio.com"
 * GitHub:               para el manejo de Versionado "https://github.com/"
