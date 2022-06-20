@@ -67,14 +67,14 @@ A continuación del Detalle de los participantes de Este proyecto
 * **Alex Marin Mendez** - Nuestro QUERIDO y ESTIMADO Profe quien nos dió todo el conocimiento y apoyo para avanzar y lograr esta entrega final.
 * **Rodrigo Collins**   - Mi  QUERIDO y ESTIMADO Tutor que siempre estuvo atento a mis consultas, compartió su conocimiento y me ayudo en momentos dificiles alumbrando con su conocimiento situaciones que no lograba resolver por mi cuenta.
 También me aportó sugerencias para cada entrega y para la entrega final el plus de "cargar datos del Comprador" para que no estén en modo "hardcode".
-* **Esteban Villalba**  - Quien escribe este README y tiene el agrado de presentar la Entrega Final. Fui aprendiendo con cada entrega, construyendo cada componente y avanzando en conocimientos para lograr mi primer SAP en REACT.
+* **Esteban Villalba**  - Quien escribe este README y tiene el agrado de presentar la Entrega Final. Fui aprendiendo con cada entrega, construyendo cada componente y avanzando en conocimientos para lograr mi primer SPA en REACT.
 
 
 ## Expresiones de Gratitud 🎁
 * Primero que nada Gracias Profe Alex y mi Tutor Rodrigo. Sus conocimientos y aportes hicieron posible este aprendizaje.
 * Si te atreves, Comenta a otros sobre este proyecto 📢
 * Si algún día están por Argentina, Provincia de Córdoba, Localidad La Cumbre serán Bienvenidos y les invitaré una cerveza 🍺 o un café ☕ por todo su apoyo! 
-* Da las gracias públicamente 🤓.
+
 
 ---
 ⌨️ con ❤️ por [Esteban Villalba](https://github.com/e-Villalba) 😊
