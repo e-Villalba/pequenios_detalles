@@ -33,11 +33,11 @@ Presionamos Enter y de esa forma se procede a descargar el proyecto en la carpet
 ## Despliegue 📦
 Como se trata de una SPA construida con REACT tienes que seguir los siguientes pasos para su despliegue, tomamos como ejemplo el despliegue en "githubpages".
 Los pasos enumerados son los descriptos por nuestro QUERIDO Profe Alex Marin Mendez!!
-    1 - Desde VSC y accediendo a una terminal ejecutar el comando "npm i -D ghpages", el parámetro "-D" indica que se trata de trabajo en entorno de desarrollo. Se instalarán los componentes que permitirán el despliegue e integración en "Git Hub pages"
-    2 - Finalizada la instalación del paso 1 dirigirse al archivo "package.json" y agregar en la primer linea lo siguiente: "homepage": "https://e-Villalba.github.io/pequenios_detalles"
-    3 - En el archivo "package.json" dirigirse a "scripts" y agregar "scripts":  "build": "react-scripts build", y  "deploy": "gh-pages -d build".
-    4 - En la terminal de VSC ejecutar "npm run build" compila y crea en disco los componentes a desplegar (htlm, css y javascript que pueden ser interpretados y ejecutados en un browser)
-    5 - Finalizado el paso 4 ejecutar "npm run deploy"
+1 - Desde VSC y accediendo a una terminal ejecutar el comando "npm i -D ghpages", el parámetro "-D" indica que se trata de trabajo en entorno de desarrollo. Se instalarán los componentes que permitirán el despliegue e integración en "Git Hub pages"
+2 - Finalizada la instalación del paso 1 dirigirse al archivo "package.json" y agregar en la primer linea lo siguiente: "homepage": "https://e-Villalba.github.io/pequenios_detalles"
+3 - En el archivo "package.json" dirigirse a "scripts" y agregar "scripts":  "build": "react-scripts build", y  "deploy": "gh-pages -d build".
+4 - En la terminal de VSC ejecutar "npm run build" compila y crea en disco los componentes a desplegar (htlm, css y javascript que pueden ser interpretados y ejecutados en un browser)
+5 - Finalizado el paso 4 ejecutar "npm run deploy"
 
 - Con estos pasos queda desplegado el Site del proyecto se puede ejecutar desde GitHubPages.
 - Tambien puedes ejecutarlo localmente desde VSC, para ello debes indicar en una "terminal" el comando "npm start" automáticamente en tu browser se levantará la SPA.
@@ -78,3 +78,4 @@ También me aportó sugerencias para cada entrega y para la entrega final el plu
 
 ---
 ⌨️ con ❤️ por [Esteban Villalba](https://github.com/e-Villalba) 😊
+
