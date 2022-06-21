@@ -4,6 +4,7 @@ import StayBuying from './StayBuying';
 import { useContext, useState } from 'react';
 import { CartContext } from './CartContext';
 import FormatNumber from '../utils/FormatNumber';
+import swal from 'sweetalert';
 
 const ItemDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(0);
@@ -11,7 +12,7 @@ const ItemDetail = ({ item }) => {
     const compraContext = useContext(CartContext);
 
     const onAdd = (qty) => {
-        alert("Seleccionaste " + qty + " items para tu compra.");
+        swal("Seleccionaste " + qty + " items para tu compra.");
         setItemCount(qty);        
    
         //Agregar este Producto al carrito

@@ -10,10 +10,11 @@ import { collection, serverTimestamp, setDoc, doc, updateDoc, increment } from '
 import db from '../utils/firebaseConfig';
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
+import swal from 'sweetalert'
 const Cart = () => {
     const test = useContext(CartContext)
     const [order, setOrder] = useState(0);
-    const [newOrder, setNewOrder] = useState({});
+    
     const eliminarProducto = (idProducto) => {
         test.removeItem(idProducto);
     }
@@ -44,8 +45,8 @@ const Cart = () => {
             return newOrderRef;
         }
         createOrderFireStore()
-            .then(result => {
-                alert("Se ha creado la nueva orden " + result.id)
+            .then(result => {                
+                swal("Se ha creado la nueva orden " + result.id)
                 setOrder(result.id)
                 test.clear();
 
