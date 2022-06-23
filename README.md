@@ -7,7 +7,6 @@ En github en la raíz de la rama "master" se encuentra el archivo "DEMO_pequenio
 
 El proyecto está Desarrolla con REACT utilizando la IDE Visual Studio Code. En la sección instalación se detallan las instrucciones para obtener una copia del proyecto que podrá ser utilizada para desarrollo y pruebas.
 
-
 ### Pre-requisitos 📋
 
 - Sugiero previamente tener instalado el Visual Studio Code, podrá utilizar otra que sea su preferida pero se sugiere la mencionada VSC.
@@ -18,7 +17,7 @@ El proyecto está Desarrolla con REACT utilizando la IDE Visual Studio Code. En 
 
 ### Instalación 🔧
 A continuacón se detallan los pasos para obtener una copia del proyecto.
-1 - Nos vamos a nuestro perfil de GitHub y seleccionamos el proyecto "pequenios_detalles"
+1 - Nos vamos al perfil de GitHub y seleccionamos el proyecto "pequenios_detalles"
 
 2 - Una vez dentro del proyecto, seleccionamos la opción de Clone or Download y copiamos la URL https://github.com/e-Villalba/pequenios_detalles .
 
@@ -83,3 +82,4 @@ También me aportó sugerencias para cada entrega y para la entrega final el plu
 ---
 ⌨️ con ❤️ por [Esteban Villalba](https://github.com/e-Villalba) 😊
 
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

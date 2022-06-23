@@ -76,7 +76,7 @@ const Cart = () => {
                                     <FontAwesomeIcon size="10x" icon={faCartPlus} ></FontAwesomeIcon>
                                 </div>
                                 <div>
-                                    <p className='LetraBigBold ms-5'>Su carrito está vacío</p>
+                                    <p className='LetraBigBold ms-5'>Su carrito está vacío!</p>
                                 </div>
                             </div>
                         </div>
